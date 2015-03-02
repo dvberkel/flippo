@@ -27,4 +27,4 @@
   "Let f operate on all the nodes of the tree"
   (if (nil? tree)
     (f tree nil nil)
-    (f tree (f (:left tree)) (f (:right tree)))))
+    (f tree (map-tree f (:left tree)) (map-tree f (:right tree)))))
