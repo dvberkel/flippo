@@ -1,10 +1,10 @@
 (ns flippo.transformation)
 
-(defn generator [start]
-  "Creates a generator that yields different values each times it is called"
-  (let [state (atom start)]
+(defn generator [elements]
+  "Creates a generator that loops through the vector elements"
+  (let [index (atom 0)]
     (fn []
-      (let [current @state]
+      (let [current-index @index]
         (do
-          (swap! state inc)
-          current)))))
+          (swap! index #(mod (inc %) (count elements)))
+          (nth elements current-index))))))
