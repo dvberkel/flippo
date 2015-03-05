@@ -18,3 +18,11 @@
                :right {:operator #(* %1 %2)
                        :left  {:value 2}
                        :right {:value 3}}})))))
+
+(deftest save-evaluate-test
+  (testing "agree with evaluate on safe values"
+    (let [tree {:value 1}] (is (= (evaluate tree) (safe-evaluate tree))))
+    (let [tree {:operator + :left {:value 1} :right {:value 2}}]
+      (is (= (evaluate tree) (safe-evaluate tree)))))
+  (testing "return nil on ArithmiticException"
+    (is (nil? (safe-evaluate {:operator / :left {:value 1} :right {:value 0}})))))
