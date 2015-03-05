@@ -14,7 +14,7 @@
   ([operators target values]
    "Returns all trees that use operators to form target"
    (filter #(= target (safe-evaluate %))
-           (let [nodes (count values)]
+           (let [nodes (dec (count values))]
              (for [os (selections operators nodes)
                    vs (permutations values)
                    tree (generate-structure-tree nodes)]
