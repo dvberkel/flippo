@@ -1,7 +1,9 @@
 (ns flippo.core
-  (:gen-class))
+  (:gen-class)
+  (:use [flippo.solution :only [solve]])
+  (:use [flippo.representation :only [infix]]))
 
 (defn -main
-  "I don't do a whole lot ... yet."
+  "Print out a solution to the 24 problem given the arguments"
   [& args]
-  (println "Hello, World!"))
+  (println (infix(first (take 1 (solve (vec (map #(Integer/valueOf %) args))))))))

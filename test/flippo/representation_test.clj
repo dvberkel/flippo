@@ -10,4 +10,11 @@
                              :left {:value 1}
                              :right {:operator +
                                      :left {:value 2}
-                                     :right {:value 3}}})))))
+                                     :right {:value 3}}})))
+    (is (= "8/(3-(8/3))" (infix {:operator /
+                      :left {:value 8}
+                      :right {:operator -
+                              :left {:value 3}
+                              :right {:operator /
+                                      :left {:value 8}
+                                      :right {:value 3}}}})))))
