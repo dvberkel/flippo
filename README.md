@@ -1,4 +1,4 @@
-Flippo
+Flippo [![Build Status](https://travis-ci.org/dvberkel/flippo.svg?branch=master)](https://travis-ci.org/dvberkel/flippo)
 ======
 
 This repository solve flippo problems.
