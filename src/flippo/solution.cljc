@@ -1,8 +1,8 @@
 (ns flippo.solution
-  (:use [flippo.evaluate :only [safe-evaluate]])
-  (:use [clojure.math.combinatorics :only [selections permutations]])
-  (:use [flippo.tree :only [generate-structure-tree]])
-  (:use [flippo.transformation :only [decorate]]))
+  (:use [flippo.evaluate :only [safe-evaluate]]
+        [clojure.math.combinatorics :only [selections permutations]]
+        [flippo.tree :only [generate-structure-tree]]
+        [flippo.transformation :only [decorate]]))
 
 (defn solve
   ([values]
