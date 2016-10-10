@@ -1,5 +1,5 @@
 (ns flippo.core
-  (:gen-class)
+  #?(:clj (:gen-class))
   (:use [flippo.solution :only [solve]]
         [flippo.representation :only [infix]]))
 
