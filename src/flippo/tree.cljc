@@ -12,8 +12,8 @@
 (defn generate-structure-tree [n]
   "Returns a sequence of trees with n nodes"
   (if (= n 0)
-    (seq [nil])
-    (mapcat (fn [t] (adjoin t {:left nil :right nil})) (generate-structure-tree (dec n)))))
+    (set [nil])
+    (set (mapcat (fn [t] (adjoin t {:left nil :right nil})) (generate-structure-tree (dec n))))))
 
 (defn map-tree [f tree]
   "Let f operate on all the nodes of the tree"
