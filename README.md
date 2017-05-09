@@ -1,7 +1,9 @@
 Flippo [![Build Status](https://travis-ci.org/dvberkel/flippo.svg?branch=master)](https://travis-ci.org/dvberkel/flippo)
 ======
 
-This repository solve flippo problems.
+This repository solve flippo problems. See
+the [blog post](http://fifth-postulate.nl/blog/2016-12-10.4-Number-Game.html)
+for more information. 
 
 Origin
 ------
